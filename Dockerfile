@@ -4,7 +4,7 @@ MAINTAINER softsam
 
 # Install all dependencies
 RUN apt-get update && \
-    apt-get install -y wget python make g++ openjdk-7-jre-headless libc6-i386 lib32stdc++6 supervisor && \
+    apt-get install -y wget python make g++ openjdk-7-jre-headless libc6-i386 lib32stdc++6 lib32z1 supervisor && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
