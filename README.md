@@ -7,6 +7,7 @@ Run automated tests on your mobile using Appium server
 - node v0.12.7
 - latest appium
 - Android SDK 24.3.3
+- Android API 17 (for Selendroid support)
 
 ## Running the appium server
     docker run -d -p 4723:4723 -e APPIUM_ARGS="" --name appium softsam/appium
