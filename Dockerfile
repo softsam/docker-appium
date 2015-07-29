@@ -17,7 +17,7 @@ USER appium
 # SDK 17 is needed for Selendroid (you can install any SDK >= 17)
 ENV ANDROID_HOME /home/appium/android-sdk-linux
 ENV ANDROID_SDK_HOME /home/appium/.android
-ENV PATH $PATH:${ANDROID_HOME}/tools
+ENV PATH $PATH:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 RUN wget -qO- "http://dl.google.com/android/android-sdk_r24.3.3-linux.tgz" | tar -zx -C /home/appium && \
     echo y | android update sdk --no-ui --all --filter platform-tools,build-tools-22.0.1 --force && \
     echo y | android update sdk --no-ui --all -t `android list sdk --all|grep "SDK Platform Android 4.2.2, API 17"|awk -F'[^0-9]*' '{print $2}'`
