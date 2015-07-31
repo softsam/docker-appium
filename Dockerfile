@@ -34,8 +34,9 @@ RUN /home/appium/apps/bin/npm install -g appium && \
     rm -rf /tmp/*
 
 # APK directory for appium
-RUN mkdir /apk
+RUN mkdir /apk && chown appium /apk
 VOLUME /apk
+
 
 USER root
 
