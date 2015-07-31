@@ -33,6 +33,10 @@ ENV PATH $PATH:/home/appium/apps/bin
 RUN /home/appium/apps/bin/npm install -g appium && \
     rm -rf /tmp/*
 
+# APK directory for appium
+RUN mkdir /apk
+VOLUME /apk
+
 USER root
 
 # Expose appium server
