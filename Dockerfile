@@ -33,12 +33,11 @@ ENV PATH $PATH:/home/appium/apps/bin
 RUN /home/appium/apps/bin/npm install -g appium && \
     rm -rf /tmp/*
 
+USER root
+
 # APK directory for appium
 RUN mkdir /apk && chown appium /apk
 VOLUME /apk
-
-
-USER root
 
 # Expose appium server
 EXPOSE 4723
