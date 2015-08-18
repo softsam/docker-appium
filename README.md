@@ -6,7 +6,7 @@ Run automated tests on your mobile using Appium server
 - openjdk 7
 - node v0.12.7
 - latest appium
-- Android SDK 24.3.3
+- Android SDK 24.3.4
 - Android API 17 (for Selendroid support)
 
 ## Running the appium server
