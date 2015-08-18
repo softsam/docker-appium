@@ -11,7 +11,7 @@ RUN apt-get update && \
 
 # Install android tools + sdk
 # SDK 17 is needed for Selendroid (you can install any SDK >= 17)
-RUN echo y | android update sdk --no-ui --all --filter build-tools-23 --force && \
+RUN echo y | android update sdk --no-ui --all --filter build-tools-23.0.0 --force && \
     echo y | android update sdk --no-ui --all -t `android list sdk --all|grep "SDK Platform Android 4.2.2, API 17"|awk -F'[^0-9]*' '{print $2}'` && \
     rm -rf /tmp/*
 
