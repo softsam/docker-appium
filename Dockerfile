@@ -30,6 +30,9 @@ ENV PATH $PATH:/home/appium/apps/bin
 RUN /home/appium/apps/bin/npm install -g appium && \
     rm -rf /tmp/*
 
+# BUGFIX: Add fixed unlock (current one not working with SDK 21 - tested on emulators)
+RUN rm /home/appium/apps/lib/node_modules/appium/build/unlock_apk/unlock_apk-debug.apk
+ADD unlock_apk-debug.apk /home/appium/apps/lib/node_modules/appium/build/unlock_apk/
 USER root
 
 # APK directory for appium
